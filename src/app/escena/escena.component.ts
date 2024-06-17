@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { iStep } from './../interfaces/i-step.interface';
+import { Component, Input } from '@angular/core';
+import { HomeComponent } from '../home/home.component';
 
 @Component({
   selector: 'app-escena',
@@ -8,5 +11,5 @@ import { Component } from '@angular/core';
   styleUrl: './escena.component.scss'
 })
 export class EscenaComponent {
-
+  @Input() steps: iStep[] = [];
 }
