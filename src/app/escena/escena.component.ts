@@ -12,4 +12,20 @@ import { HomeComponent } from '../home/home.component';
 })
 export class EscenaComponent {
   @Input() steps: iStep[] = [];
+
+
+  currentStep: number = 0;
+
+  nextStep() {
+    if (this.currentStep < this.steps.length - 1) {
+      this.currentStep++;
+    }
+  }
+
+  prevStep() {
+    if (this.currentStep > 0) {
+      this.currentStep--;
+    }
+  }
+
 }
